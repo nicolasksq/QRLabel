@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="es">
+        <head>
+        <meta charset="UTF-8">
+        <title>Subir Archivos para PDF</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .file-list { margin-top: 10px; }
+        .file-item { margin-bottom: 5px; }
+        .upload-btn { margin-top: 15px; padding: 10px 15px; }
+    </style>
+</head>
+<body>
+<h1>Subir Archivos para convertir a PDF</h1>
+<form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+    <input type="file" id="filesInput" name="files" multiple>
+    <div class="file-list" id="fileList"></div>
+    <button type="submit" class="upload-btn">Convertir a PDF</button>
+</form>
+
+<script>
+    // Muestra la lista de archivos seleccionados
+    document.getElementById('filesInput').addEventListener('change', function(e) {
+        var fileList = document.getElementById('fileList');
+        fileList.innerHTML = '';
+        for (var i = 0; i < e.target.files.length; i++) {
+            var div = document.createElement('div');
+            div.className = 'file-item';
+            div.textContent = e.target.files[i].name;
+            fileList.appendChild(div);
+        }
+    });
+</script>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>
